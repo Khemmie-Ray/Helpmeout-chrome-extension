@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop Up</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="popup.css">
+    <script src="popup.js" defer></script>
+</head>
+<body>
+    <section class="container">
+        <header>
+            <img src="assets/Logo.svg" alt="" class="logo">
+            <i class="ri-settings-2-line"></i>
+            <i class="ri-close-circle-line"></i>
+        </header>
+        <p>This extension helps you record and share help videos with ease.</p>
+        <div class="card">
+            <div class="Fullscreen">
+                <i class="ri-computer-line"></i>
+                <p>Fullscreen</p>
+            </div>
+            <div>
+                <i class="ri-file-copy-line"></i>
+                <p>Current Tab</p>
+            </div>
+        </div>
+        <div>
+            <div class="check-card">
+                <p><i class="ri-vidicon-line"></i> Camera</p>
+                <input type="checkbox" id="switch" /><label for="switch"></label>
+            </div>
+            <div class="check-card">
+                <p><i class="ri-mic-fill"></i> Audio</p>
+                <input type="checkbox" id="switch-two" /><label for="switch-two"></label>
+            </div>
+            <button id="startRecordingBtn">Start Recording</button>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Sora:wght@600;700&family=Work+Sans&display=swap');
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+}
+
+header, .card, .check-card {
+    display: flex;
+}
+
+.card p {
+    font-size: .9rem;
+}
+
+.card, header, .check-card {
+    align-items: center;
+    justify-content: space-between;
+}
+
+header {
+    margin-bottom: 1em;
+}
+
+.logo {
+    width: 100px;
+}
+
+.Fullscreen {
+    color: gray;
+}
+
+.card {
+    width: 70%;
+    margin: 1em auto;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+button {
+    background-color: #0F172A;
+    width: 252px;
+    height: 51px;
+    color: white;
+    border-radius: 12px;
+    border: 0;
+}
+
+header i, .card i {
+    font-size: 2rem;
+}
+
+.check-card {
+    border: 1px solid black;
+    padding: 0 .5em;
+    height: 51px;
+    border-radius: 12px;
+    margin-bottom: 1em;
+}
+
+/* ======= Toggle button ========= */
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -100px;
+	width: 50px;
+	height: 30px;
+	background: grey;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 50px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background: black;
+}
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 50px;
+}
