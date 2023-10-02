@@ -52,8 +52,23 @@
     </section>
     <section class="w-[100%] lg:w-[40%] mx-auto my-16 text-center">
         <h2 class="font-[700] text-[24px]">To ensure the availability and privacy of your video, we recommend saving it to your account.</h2>
-        <button class="bg-[#141414] text-white p-4 rounded-md my-8">Save Video</button>
+        <button class="bg-[#141414] text-white p-4 rounded-md my-8" id="save-btn">Save Video</button>
         <p>Don't have an account? <a href="#" class="font-[700] underline">Create account</a></p>
+    </section>
+
+    <!-- Modal  -->
+
+    <section id="modal" class="fixed inset-0 flex items-center justify-center z-50 hidden">
+        <div class="bg-white w-[90%] lg:w-[30%] p-8 rounded-lg shadow-lg text-center relative">
+        <i class="ri-close-circle-line text-[1.8rem] absolute top-6 right-6" id="cancel-btn"></i>
+        <img src="assets/success-kite.png" alt="" class="opacity-1 mx-auto">
+        <p class="text-[24px] font-worksans">Your video link has been sent to johnmark@gmail.com</p>
+        <div class="mt-12">
+            <p>Would you need to view this video later? Save to your account now!</p>
+            <button class="bg-[#141414] text-white p-4 rounded-md my-8">Save Video</button>
+        <p>Don't have an account? <a href="#" class="font-[700] underline">Create account</a></p>
+        </div>
+        </div>
     </section>
      <!-- ======Footer ====== -->
 
@@ -80,5 +95,25 @@
         </div>
         </div>
     </footer>
+    <script>
+        const saveBtn = document.getElementById('save-btn')
+        const modal = document.getElementById('modal')
+        const cancelBtn = document.getElementById('cancel-btn')
+
+
+        saveBtn.addEventListener('click', showModal)
+        function showModal() {
+            modal.style.display = 'flex'
+            document.body.style.backgroundColor = 'rgba(0,0,0,0.5)'
+        }
+
+        cancelBtn.addEventListener('click', hideModal)
+        function hideModal() {
+            console.log('help')
+            modal.style.display = 'none'
+            document.body.style.backgroundColor = 'rgba(0,0,0,0)'
+        }
+        console.log(saveBtn)
+    </script>
 </body>
 </html>
